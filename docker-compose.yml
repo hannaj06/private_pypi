@@ -9,7 +9,7 @@ services:
               target: /data
         # Use an .htpasswd file to control access, serve packages from
         # ./data (which will be /data in the container)
-        command: -P /data/.htpasswd -a update,download,list --disable-fallback /data/packages
+        command: -P /data/.htpasswd -a update,download,list --disable-fallback --welcome /data/welcome.html /data/packages
         ports:
-            - "8080:8080"
+            - "8081:8080"
         restart: always
