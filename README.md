@@ -28,10 +28,5 @@ pip install --extra-index-url http://172.104.20.240:8080/ <package_name>
 docker-compose up -d
 ```
 
-### Add a user
-
-```
-
-```
 
 
