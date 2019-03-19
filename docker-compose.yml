@@ -11,5 +11,5 @@ services:
         # ./data (which will be /data in the container)
         command: -P /data/.htpasswd -a update,download,list --disable-fallback --welcome /data/welcome.html /data/packages
         ports:
-            - "8081:8080"
+            - "8080:8080"
         restart: always
