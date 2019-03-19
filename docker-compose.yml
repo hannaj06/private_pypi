@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+    pypiserver:
+        image: pypiserver/pypiserver:latest
+        volumes:
+              - /etc/apache2/.htpasswd:/data/.htpasswd
+              - target: /data
+        #     - type: bind
+        #       source: ./data
+        # Use an .htpasswd file to control access, serve packages from
+        # ./data (which will be /data in the container)
+        command: -P /data/.htpasswd -a update,download,list /data/packages
+        ports:
+            - "8080:8080"
