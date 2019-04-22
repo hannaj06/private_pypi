@@ -17,7 +17,7 @@ twine upload --repository-url http://172.104.20.240:8080 dist/<package_name>*
 ### Download package
 
 ```
-pip install --extra-index-url http://172.104.20.240:8080/ test-package  --trusted-host 172.104.20.240 <package_name>
+pip install --extra-index-url http://172.104.20.240:8080/ <package_name>  --trusted-host 172.104.20.240 <package_name>
 ```
 
 
