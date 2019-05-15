@@ -9,14 +9,6 @@ services:
             - ./data/.htpasswd:/data/.htpasswd
             - ./data/welcome.html:/data/welcome.html
             - ./data/packages:/data/packages
-            #- type: bind
-            #  source: ./data/.htpasswd
-            #  target: /data/.htpasswd
-            #- type: volume
-            #  source: package_data
-            #  target: /data/packages
-        # Use an .htpasswd file to control access, serve packages from
-        # ./data (which will be /data in the container)
         command: -P /data/.htpasswd -a update,download,list --disable-fallback --welcome /data/welcome.html /data/packages
         ports:
             - "8080:8080"
