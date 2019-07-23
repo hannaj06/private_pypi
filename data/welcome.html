@@ -8,18 +8,18 @@
 
 <p> To use this server with pip, run the the following command:
 <blockquote><pre>
-pip install --extra-index-url http://172.104.20.240:8080/ PACKAGE [PACKAGE2...]
+pip install --extra-index-url https://pypi.komodotech.io/ PACKAGE [PACKAGE2...]
 </pre></blockquote></p>
 
 <p> To use this server with easy_install, run the the following command:
 <blockquote><pre>
-easy_install -i http://172.104.20.240:8080/simple/ PACKAGE
+easy_install -i https://pypi.komodotech.io/simple/ PACKAGE
 </pre></blockquote></p>
 
 <p>To upload a package, run the following commands:
 <blockquote><pre>
 python3 setup.py sdist bdist_wheel
-twine upload --repository-url http://172.104.20.240:8080 dist/<package_name>*
+twine upload --repository-url https://pypi.komodotech.io dist/<package_name>*
 </pre></blockquote></p>
 
 <p>The complete list of all packages can be found <a href="/packages/">here</a>
