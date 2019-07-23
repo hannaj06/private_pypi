@@ -1,23 +1,23 @@
 # Private Pypi server
 
-private pypi shop for 
+private python package repository w/ authentication
 
 ### Hosting information
 ```
-https://pypi.komodotech.io
+https://<domain>
 ```
 
 ### Compile and Upload a package
 
 ```
 python3 setup.py sdist bdist_wheel
-twine upload --repository-url https://pypi.komodotech.io dist/<package_name>*
+twine upload --repository-url https://<domain>/<package_name>*
 ```
 
 ### Download package
 
 ```
-pip install --extra-index-url https://pypi.komodotech.io <package_name>
+pip install --extra-index-url https://<domain> <package_name>
 ```
 
 
